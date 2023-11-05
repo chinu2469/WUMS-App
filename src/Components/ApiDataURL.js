@@ -4,5 +4,5 @@ function ApiDataURL() {
   return <div>ApiDataURL</div>;
 }
 
-export default Datacreator;
+export default ApiDataURL;
 export const baseURLinUse = "https://localhost:7108";

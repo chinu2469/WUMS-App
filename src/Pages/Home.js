@@ -11,12 +11,12 @@ function Home() {
     <>
         <Navbar />
         <div>
-      {isAuthenticated ? (
+      {/* {isAuthenticated ? (
         <PrivateRoute element={<Dashboard/>} />
       ) : (
         <Login setIsAuthenticated={setIsAuthenticated} />
-      )}
-    </div>
+      )} */}
+      </div>
     <Outlet />
     </>
   );

@@ -1,8 +1,8 @@
 //-----------------------------------------------------------------------------------------------------------
 import React, { useState } from "react";
 import axios from "axios";
-import { baseURLinUse } from "../Component/ApiDataURL"; //baseURLinUse
-import Register from "./Register";
+import { baseURLinUse } from "../Components/ApiDataURL"; //baseURLinUse
+//import Register from "./Register";
 import { Link } from "react-router-dom";
 
 const baseURL = baseURLinUse + "/Users";
