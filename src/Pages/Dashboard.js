@@ -5,6 +5,8 @@ import axios from "axios";
 // import LiveReport from "./LiveReport";
 import LiveCircleGraph from "../Components/LiveCircleGraph";
 import { baseURLinUse } from "../Components/ApiDataURL"; //baseURLinUse
+import Single_Graph from "../Components/Single_Graph";
+import MultipleGraph from "../Components/MultipleGraph"
 
 const baseURL = baseURLinUse + "/QSData/LastRowdata";
 //this is main container for every object and wraps all the data showed in display other than nav and footer
@@ -35,21 +37,25 @@ const Dashboard = () => {
 
     return (
       <React.Fragment>
-        <div className="container-fluid mainContent">
+        <div className="container-fluid">
               {/* the divs whic are  used to show the data live feed and the next is for floor wise */}
-              <div className="WQI">
+          <div className="row">
+              <div className="WQI col-md-3 mb-4">
               <LiveCircleGraph data={WQIobj}/>
               </div>
-              <div className="Ranker">
-
+              <div className="Ranker col-md-2 mb-4 txt ">
+                  Ranker 
               </div>
-              <div className="ShortGraph">
-
+              <div className="ShortGraph col-md-7">
+              <Single_Graph/>
               </div>
-              <div className="table.value">
-
+              <div className="MultiGraph ">
+                <MultipleGraph/>
               </div>
-            </div>
+
+          </div>
+        </div>
+
       </React.Fragment>
     );
   }

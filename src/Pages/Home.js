@@ -10,7 +10,8 @@ function Home() {
   return (
     <>
         <Navbar />
-        <div>
+        <div className="pageCSS">
+        <Dashboard/>  
       {/* {isAuthenticated ? (
         <PrivateRoute element={<Dashboard/>} />
       ) : (

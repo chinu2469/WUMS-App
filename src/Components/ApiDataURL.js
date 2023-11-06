@@ -1,3 +1,4 @@
+//used to store the url to access from single point whenever needs to change
 import React from "react";
 
 function ApiDataURL() {

@@ -11,7 +11,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />}>
-          <Route index element={<Dashboard />} />
+          
           <Route path="/register" element={<Register />} />
           {/* <Route path="/bymonth" element={<ByMonth />} /> */}
           <Route path="/ErrorStates" element={<ErrorStates />} />

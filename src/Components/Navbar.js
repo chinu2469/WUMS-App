@@ -10,8 +10,12 @@ export default class Navbar extends React.Component {
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div className="container-fluid">
             <a className="navbar-brand" href="/#">
-              AQMS
+              <h3>WUMS</h3>
             </a>
+            <h6 style={{ paddingTop: "5px", marginTop: "9px", color: "grey",marginRight: "20px" }}>
+            .1Facility
+          </h6>
+
             <button
               className="navbar-toggler"
               type="button"
