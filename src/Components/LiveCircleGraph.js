@@ -15,7 +15,7 @@ export default function LiveCircleGraph(props)
 
   return(
     <div className="livedisplay">
-    <h4 className=" txt">{props.data.name} level</h4>
+    <h2 className=" txt">{props.data.name} WQI</h2>
     <CircularProgressbar
       value={dt}
       text={`${dt}%`}
@@ -27,6 +27,7 @@ export default function LiveCircleGraph(props)
         trailColor: "#eee",
       })}
     />
+    <div className=" txt"> Todays WQI index </div>
     </div>
   );
 }

@@ -42,7 +42,7 @@ var last15 = [];
                 };
         const getdata = setInterval(() => {
           axios
-            .get(baseURL +"2023-10-30" ) //, { headers } Today() 
+            .get(baseURL +"2023-11-08" ) //, { headers } Today() 
             .then((response) => {
               console.log(response.status + " wqi data status");
               //setbyday(response.data);
@@ -86,20 +86,20 @@ var last15 = [];
                       ]);
                     return (0);
                 });
-                console.log(formattedData);
-                console.log(phData);
+                //console.log(formattedData);
+                //console.log(phData);
             })
             .catch((err) => {
               console.log("error" + err);
             });
-        }, 3000);
+        }, 10000);
         return () => clearInterval(getdata)
         } catch (ex) {
           console.log(ex);
         }
     }, []);
     
-	
+	//OPTIONS FOR GRAPH
     const options = {
 			theme: "light2",
 			animationEnabled: true,
@@ -132,7 +132,7 @@ var last15 = [];
 				name: "PH",
 				showInLegend: true,
 				xValueFormatString: "HH:mm",
-				yValueFormatString: "#,##0",
+				yValueFormatString: "#,##0.#",
 				dataPoints: phData
 			},
 			{
@@ -144,15 +144,15 @@ var last15 = [];
 				yValueFormatString: "$#,##0.#",
 				dataPoints: turbData
 			},
-            {
-				type: "spline",
-				name: "Conductivity",
-				axisYType: "secondary",
-				showInLegend: true,
-				xValueFormatString: "HH:mm",
-				yValueFormatString: "$#,##0.#",
-				dataPoints: condData
-			},
+            // {
+			// 	type: "spline",
+			// 	name: "Conductivity",
+			// 	axisYType: "secondary",
+			// 	showInLegend: true,
+			// 	xValueFormatString: "HH:mm",
+			// 	yValueFormatString: "$#,##0.#",
+			// 	dataPoints: condData
+			// },
             {
 				type: "spline",
 				name: "Co2",

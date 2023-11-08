@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Login from "../Pages/Login.js";
+//import { right } from "@popperjs/core/index.js";
 
 export default function LogOut() {
   const navigate = useNavigate();
@@ -12,9 +13,11 @@ export default function LogOut() {
   }
   return (
     <div>
-      <a className="btn btn-primary nav-link active col-2" onClick={Logout}>
+      <button className="btn btn-primary nav-link active col-md-2" style={{borderRightWidth:'50px'}} >
+      <a onClick={Logout}>
         logOut
       </a>
+      </button>
     </div>
   );
 }

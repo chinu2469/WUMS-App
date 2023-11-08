@@ -32,7 +32,7 @@ const Dashboard = () => {
     return () => clearInterval(getdata);
   }, []);
 
-  const WQIobj = { Name: "WQI", val: livedata.wqi || 2, max: 80, min: 30 };
+  const WQIobj = { Name: "WQI", val: livedata.wqi || 2, max: 60, min:45  };
 // using livedata?.wqi || 0 ensures that it defaults to 0 if livedata or livedata.wqi is undefined
 
     return (
@@ -44,7 +44,13 @@ const Dashboard = () => {
               <LiveCircleGraph data={WQIobj}/>
               </div>
               <div className="Ranker col-md-2 mb-4 txt ">
-                  Ranker 
+                  <h2>Champions</h2>
+                  <h5 style={{color: "grey"}}>in Water saving</h5>
+                  <div id="rank1" >Floor 3</div>
+                  <div id="rank2" >Floor 8</div>
+                  <div id="rank3" >Floor 2</div>
+                  <div id="rank4" >Floor 4</div>
+                  <div id="rank5" >Floor 9</div>
               </div>
               <div className="ShortGraph col-md-7">
               <Single_Graph/>
